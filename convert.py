@@ -6,6 +6,8 @@ Created on Tue Apr 21 18:19:26 2020
 @author: shreyas
 """
 
+#  Converts images file to csv file
+
 def convert(imgf, labelf, outf, n):
     f = open(imgf, "rb")
     o = open(outf, "w")
@@ -29,5 +31,3 @@ def convert(imgf, labelf, outf, n):
 
 convert("train-images-idx3-ubyte", "train-labels-idx1-ubyte",
         "mnist_train.csv", 60000)
-convert("t10k-images-idx3-ubyte", "t10k-labels-idx1-ubyte",
-        "mnist_test.csv", 10000)
