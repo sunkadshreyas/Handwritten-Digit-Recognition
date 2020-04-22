@@ -10,10 +10,14 @@ import numpy as np
 from matplotlib import pyplot as plt
 import pandas as pd
 
+# The first column contains of lables of numbers
+# Rest of the columns contain entries of 28x28 pixels
+# Hence only first column is y
 dataset = pd.read_csv('mnist_train.csv')
 x = dataset.iloc[:,1:].values
 y = dataset.iloc[:,0].values
 
+# Test set to consist of 25% entries of dataset
 from sklearn.model_selection import train_test_split
 X_train,X_test,y_train,y_test =  train_test_split(x,y, test_size=0.25)
 
